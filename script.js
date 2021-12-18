@@ -8,7 +8,7 @@ var data = [
 
 function tampil() {
     var tabel = document.getElementById("tabel");
-    tabel.innerHTML = "<tr><th>No</th><th>Nama Pasien</th><th>Action</th></tr>";
+    tabel.innerHTML = "<tr><th>No</th><th>Nama</th><th>Action</th></tr>";
     for (let i = 0; i < data.length; i++) {
         var btnEdit = "<button class='btn-edit' href='#' onclick='edit(" + i + ")'>Edit</button>";
         var btnHapus = "<button class='btn-hapus' href='#' onclick='hapus(" + i + ")'>Hapus</button>";
@@ -18,7 +18,7 @@ function tampil() {
 }
 
 function tambah() {
-    var input = document.querySelector("input[name=pasien]");
+    var input = document.querySelector("input[name=data]");
     data.push(input.value);
     tampil();
     input.value = "";
